@@ -1,0 +1,94 @@
+\documentclass[11pt, dviodfmx]{jreport}
+
+\usepackage{treatise}
+\usepackage{receipt}
+
+\usepackage{ascmac}
+\usepackage{bm}
+\usepackage{fancyhdr} % ヘッダー・フッター
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{cases}
+\usepackage[subrefformat=parens]{subcaption}
+\usepackage{comment} % コメントアウト
+\usepackage{boites}
+\usepackage{framed, color}
+\usepackage{enumitem, amssymb}
+
+%しおり用
+% hyperref - begin
+\usepackage[   % (括弧内はデフォルト値)
+dvipdfm,
+draft=false,   % hyperref の機能の有効化 (false)
+bookmarks=true,   % しおり (true)
+bookmarksnumbered=true,   % しおりに節番号を振るか (false)
+bookmarksopen=false,   % しおりのツリーを開く (false)
+bookmarkstype=toc,   % しおりのタイプ
+colorlinks=false,   % リンクの色付け (false)
+anchorcolor=black,   % アンカーテキストの色指定 (black)
+citecolor=black,   % 参考文献リンクの色 (green)
+filecolor=black,   % ローカルファイルリンクの色 (magenta)
+urlcolor=black,   % URL の色 (magenta)
+pdfauthor={Author},   % 著者名
+pdfborder={0 0 0},   % 枠 (1 0 0)
+pdftitle={Title},   % タイトル
+pdfsubject={Subject},   % サブタイトル
+pdfkeywords={Keywords}   % キーワード
+]{hyperref}
+% hyperref - end
+
+% hyperref 文字化け回避
+\usepackage{pxjahyper}
+
+\begin{document}
+% 受領表
+\begin{treatise}
+	\受領年度{令和4年度}
+	\論文題目{\huge}{スパースモデリングを用いた干渉関係推定}
+	\論文題目英語{\normalsize}{Interference\,relationship\,estimation\,using\,sparsemodeling}
+	\論文執筆者{5316}{小林\,\,慧悟}
+	%\論文執筆者二名{学生番号}{氏名}{学生番号}{氏名}
+	\指導教員{稲毛\,\,契}{准教授}
+	\長名{山本\,\,哲也}{教授}
+	\受領日{令和5年xx月yy日}
+\end{treatise}
+
+% 表紙
+\begin{treatiseTitle}
+	\年度{令和4年度}
+	\日本語タイトル{\huge}{スパースモデリングを用いた干渉関係推定}
+	\英語タイトル{\large}{Interference\,relationship\,estimation\,using\,sparsemodeling}
+	\筆者一名{5316}{小林\,\,慧悟}
+	%\筆者二名{学生番号}{氏名}{学生番号}{氏名}
+	%\筆者三名{}{}{}{}{}{}
+	%\筆者四名{}{}{}{}{}{}{}{}
+	\指導教員一名{稲毛\,\,契}{准教授}
+	\提出日{令和5年xx月yy日}
+\end{treatiseTitle}
+
+\pagestyle{fancy}%
+\lhead{\rightmark}    %左側ヘッダの定義
+%\chead{¥leftmark}    中央ヘッダの定義
+\rhead{令和4年度\,\,稲毛研究室\,\,卒業論文}    %右側ヘッダの定義
+%\lfoot[1]{奇数ページ}    左側フッターの定義
+%\cfoot[1]{}    中央フッターの定義
+%\rfoot[偶数ページ]{奇数ページ}    右側フッターの定義
+%\renewcommand{\headrulewidth}{0.1mm}   % ヘッダの線の太さ
+%\renewcommand{\footrulewidth}{3mm}    %フッターの線の太さ
+
+\clearpage
+\addcontentsline{toc}{chapter}{概要}
+\input{summary.tex}
+
+\tableofcontents
+\listoftables
+\listoffigures
+\clearpage
+
+%\graphicspath{{./figures/}} % 図が特定のフォルダにある場合には設定
+
+\input{introduction.tex} % 序論
+
+\addcontentsline{toc}{chapter}{参考文献}
+
+\end{document}

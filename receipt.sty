@@ -1,0 +1,134 @@
+\newenvironment{treatise}{%
+\thispagestyle{empty}
+\begin{picture}(\pwidth,240)
+	\put(0,0){\makebox(\pwidth,240){}}%
+	\put(10,190){\makebox(20,5){\Large 論文題目}}%
+	\put(11,160){\makebox(20,5){\large 論文執筆者}}%
+	
+%	\put(30, 188){\line(1,0){120}}%
+%	\put(30, 175){\line(1,0){120}}%
+	\put(32, 158){\line(1,0){80}}%
+	\put(32, 150){\line(1,0){80}}%
+	\put(32, 142){\line(1,0){80}}%
+	\put(32, 134){\line(1,0){80}}%
+	
+	\put(11, 120){\makebox(20,5){\large \hbox to 5zw{提出物}}}%
+	
+	\put(80, 120){\makebox(20,5) {(1) 卒業論文提出(原本) 正副計2部 (A4 縦 ファイルに綴じる)}}%
+	\put(61.8, 114){\makebox(20,5) {(2) 抄録原稿A4 2枚(片面印刷2ページ)}}%
+	\put(80, 109){\makebox(20,5) {※テーマ名、氏名を記入した封筒に入れて提出}}%
+	\put(66.1, 104){\makebox(20,5) {(3) 審査用抄録コピー 150部(1枚に両面印刷)}}%
+	\put(80, 99){\makebox(20,5) {※テーマ名、氏名を記入した封筒に入れて提出}}%
+	
+	\put(69, 90){\makebox(20,5) {上記の卒業論文及び抄録の提出を確認しました。}}%
+	\put(70, 81){\makebox(20,5){\large 指導教員}}%
+	\put(70, 80){\line(1,0){80}}%
+	\put(70, 72){\line(1,0){80}}%
+	\put(135, 81){\makebox(20,5){\large 印}}%
+	\put(135, 73){\makebox(20,5){\large 印}}%
+	
+
+	\put(11,10){%
+  		\put(0,0){\framebox(139,50){}}%
+  		\put(0,0){%
+   		\put(1,0){\makebox(26,18)[lt]{}}%
+   		\put(0,0){\makebox(26,19)}%
+ 		}
+ 	}
+ 	
+ 	\put(85, 50){\makebox(20,5) {\large 卒業論文 \hspace{5mm} 受領証}}%
+ 	\put(45, 40){\makebox(20,5) {提出物(1)、(2)及び(3)を受領しました。}}%
+ 	\put(130, 17.5){\makebox(20,5){\Large 印}}%
+
+  	\put(27,210){\makebox(\pwidth,20){\textbf{\huge 卒業論文 提出確認書 (指導教員)}}}%
+ 	}%
+ {%
+ \end{picture}
+ 	\newpage
+ 	\pagestyle{plain}
+ }
+
+\newcommand{\受領年度}[1]{%
+	\put(25, 207){%
+  		\put(0, 10){%
+   		\put(0, -0.3){%
+    	\makebox(0, 0)[b]{%
+     		\begin{minipage}{130mm}%
+     		\begin{center}
+      			\textbf{\huge #1}%
+     		\end{center}
+     		\end{minipage}%
+    	}%
+   		}%
+  		}%
+ 	}%
+ 	\put(47, 50){\makebox(20,5){\large #1}}%
+}
+
+\newcommand{\論文題目}[2]{%
+	\put(30, 189){%
+		\put(0, 0){%
+		\put(0, 0){\line(1, 0){120}}%
+   		\put(57.5, 1){%
+    		\makebox(0, 80)[b]{%
+     		\begin{minipage}{110mm}%
+     		\begin{center}
+     			{#1 %
+   				\ifuseNum
+    				\shortstack{\Vnum　#2}%
+   				\else
+    				\shortstack{#2}%
+   				\fi
+  				}
+     		\end{center}
+     	\end{minipage}%
+   		}%
+   		}%
+  		}%
+ 	}%
+
+}
+
+\newcommand{\論文題目英語}[2]{%
+	\put(30, 175){%
+		\put(0, 0){%
+		\put(0, 0){\line(1, 0){120}}%
+   		\put(57.5, 1){%
+    		\makebox(0, 80)[b]{%
+     		\begin{minipage}{110mm}%
+     		\begin{center}
+     			{#1 %
+   				\ifuseNum
+    				\shortstack{\Vnum　#2}%
+   				\else
+    				\shortstack{#2}%
+   				\fi
+  				}
+     		\end{center}
+     	\end{minipage}%
+   		}%
+   		}%
+  		}%
+ 	}%
+}
+
+\newcommand{\論文執筆者}[2]{%
+	\put(40, 160){\makebox(20,5){\large #1 #2}}%
+}
+
+\newcommand{\論文執筆者二名}[4]{%
+	\put(40, 160){\makebox(20,5){\large #1 #2}}%
+	\put(40, 151){\makebox(20,5){\large #3 #4}}%
+}
+
+\newcommand{\指導教員}[2]{%
+	\put(98, 81.1){\makebox(20,5){\large #1}}%
+}
+
+\newcommand{\長名}[2]{%
+	\put(10,10){\makebox(\pwidth,20){\Large 電気電子工学コース長\hspace{10mm} #1}}%
+}
+
+\newcommand{\受領日}[1]{%
+	\put(115, 30){\makebox(20,5){\large #1}}%
+}
