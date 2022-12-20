@@ -33,8 +33,19 @@
 \section{代表値の選定}
 \begin{itemize}
   \item 履歴の記録方法
-  \item 中央値と最頻値が一緒になる
+  \item 中央値と最頻値が一緒になる(これを代表値にする手法を考案出来たら)
 \end{itemize}
+
+\begin{table}[H]
+	\centering
+	\caption{各データの設定}
+	\begin{tabular}{|c|c|c|}\hline
+      & 1 & 0 \\ \hline
+    送信履歴 & 送信時 & それ以外 \\ \hline
+    CS履歴 & CS時 & それ以外 \\ \hline
+    受信履歴 & 受信時 & それ以外 \\ \hline
+  \end{tabular}
+\end{table}
 
 \section{パスロス}
 \begin{itemize}
@@ -56,13 +67,29 @@
 \end{itemize}
 
 \section{推定結果}
+平均値を代表値とする手法しかできなかった場合
 \begin{itemize}
-  \item 代表値を平均値とした時の横区間、縦相関値のグラフ
-  \item 代表値を中央値、最頻値とした時の横区間、縦相関値のグラフ
-  \item もしかしたまとめるかも
+  \item 代表値を平均値とした時の横区間、縦相関値のグラフ(ピアソンとMICの両方)
+  \item 時系列データの散布図(MICによって相関値が上昇した)
 \end{itemize}
+
+代表値の取り方をいい感じに考えついた場合
+\begin{itemize}
+  \item 代表値を平均値とした時の横区間、縦相関値のグラフ(ピアソンとMICの両方)
+  \item 時系列データの散布図(MICによって相関値が上昇した)
+  \item 別の代表値の取り方でやったときの横区間、縦相関値のグラフ
+  \item 時系列データの散布図
+  \item 相関値が上がった理由
+\end{itemize}
+
+% \begin{figure}[H]
+%   \includegraphics[width=7cm]{}
+%   \centering
+%   \caption{}
+%   \label{fig:}
+% \end{figure}
 
 \chapter{結論}
 \begin{itemize}
-  \item 代表値良かったもの
+  \item いい感じにまとめる
 \end{itemize}
